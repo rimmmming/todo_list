@@ -5,7 +5,7 @@ import TodoItemList from './components/TodoItemList';
 
 class App extends Component {
 	id = 3 // 이미 0,1,2 가 존재하므로 3으로 설정
-
+	color = ['#343a40', '#f03e3e', '#12b886', '#228ae6'];
 	state = {
 		input: '',
 		todos: [
@@ -86,8 +86,8 @@ class App extends Component {
 				onKeyPress={handleKeyPress}
 				onChange={handleChange}
 				onCreate={handleCreate}
-				/>
-			)}>
+				/>)}
+				>
 				<TodoItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove}/>
 			</TodoListTemplate>
 			);
