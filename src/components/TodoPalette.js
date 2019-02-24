@@ -1,15 +1,22 @@
 import React from 'react';
 import './TodoPalette.css';
 
-const Palette = ({color}) => {
+const Color = ({ color }) => {
+    return (
+        <div className={`color`} style={{ background: color}}></div>
+    )
+}
+    
+const Palette = ({colors}) => {
+    const colorList = colors.map(
+    (color) => (<Color color={color} />));
+
     return (
         <div className="palette">
-            <div className="color false" style={color}></div>
-            <div className="color false" style={color}></div>
-            <div className="color false" style={color}></div>
-            <div className="color active" style={color}></div>
+            {{colorList}}
         </div>
     );
 };
+
 
 export default Palette;
